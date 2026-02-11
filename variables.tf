@@ -21,9 +21,9 @@ EOT
     display_name               = string
     log_analytics_workspace_id = string
     name                       = string
-    lookback_date              = optional(string, "01/01/1970 00:00:00")
+    lookback_date              = optional(string) # Default: "01/01/1970 00:00:00"
     password                   = optional(string)
-    polling_frequency          = optional(string, "OnceAnHour")
+    polling_frequency          = optional(string) # Default: "OnceAnHour"
     tenant_id                  = optional(string)
     user_name                  = optional(string)
   }))
