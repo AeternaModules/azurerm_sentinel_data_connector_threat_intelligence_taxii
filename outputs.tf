@@ -1,3 +1,7 @@
+output "sentinel_data_connector_threat_intelligence_taxiis_id" {
+  description = "Map of id values across all sentinel_data_connector_threat_intelligence_taxiis, keyed the same as var.sentinel_data_connector_threat_intelligence_taxiis"
+  value       = { for k, v in azurerm_sentinel_data_connector_threat_intelligence_taxii.sentinel_data_connector_threat_intelligence_taxiis : k => v.id }
+}
 output "sentinel_data_connector_threat_intelligence_taxiis_api_root_url" {
   description = "Map of api_root_url values across all sentinel_data_connector_threat_intelligence_taxiis, keyed the same as var.sentinel_data_connector_threat_intelligence_taxiis"
   value       = { for k, v in azurerm_sentinel_data_connector_threat_intelligence_taxii.sentinel_data_connector_threat_intelligence_taxiis : k => v.api_root_url }
